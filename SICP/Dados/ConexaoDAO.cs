@@ -11,7 +11,7 @@ namespace SICP.Dados
     class ConexaoDAO
     {
         public static MySqlConnection _conexao;
-        string query = "server=localhost;userid=root;password=182520;database=db_material;port=3306";
+        //string query = "server=localhost;userid=root;password=182520;database=db_material;port=3306";
 
 
 

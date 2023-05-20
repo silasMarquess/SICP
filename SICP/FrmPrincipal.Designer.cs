@@ -56,7 +56,7 @@ namespace SICP
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1351, 752);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1660, 818);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -71,7 +71,7 @@ namespace SICP
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.80864F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.19136F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(133, 746);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(133, 812);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -86,7 +86,7 @@ namespace SICP
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.94118F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.05882F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(127, 276);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(127, 301);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // button2
@@ -97,9 +97,9 @@ namespace SICP
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::SICP.Properties.Resources.Produto_Sem_Nota;
-            this.button2.Location = new System.Drawing.Point(3, 149);
+            this.button2.Location = new System.Drawing.Point(3, 162);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 124);
+            this.button2.Size = new System.Drawing.Size(121, 136);
             this.button2.TabIndex = 1;
             this.button2.Text = "PRODUTOS S/N";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -116,7 +116,7 @@ namespace SICP
             this.button1.Image = global::SICP.Properties.Resources.CIMENTO;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 140);
+            this.button1.Size = new System.Drawing.Size(121, 153);
             this.button1.TabIndex = 0;
             this.button1.Text = "GERENCIAR CIMENTO";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -129,9 +129,9 @@ namespace SICP
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 285);
+            this.panel1.Location = new System.Drawing.Point(3, 310);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(127, 458);
+            this.panel1.Size = new System.Drawing.Size(127, 499);
             this.panel1.TabIndex = 1;
             // 
             // button4
@@ -140,7 +140,7 @@ namespace SICP
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::SICP.Properties.Resources.MINIMIZAR;
-            this.button4.Location = new System.Drawing.Point(66, 405);
+            this.button4.Location = new System.Drawing.Point(66, 446);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 50);
             this.button4.TabIndex = 1;
@@ -153,7 +153,7 @@ namespace SICP
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::SICP.Properties.Resources.FECHA;
-            this.button3.Location = new System.Drawing.Point(4, 405);
+            this.button3.Location = new System.Drawing.Point(4, 446);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 50);
             this.button3.TabIndex = 0;
@@ -180,7 +180,7 @@ namespace SICP
             this.Pn_Pai.ShadowDepth = 5;
             this.Pn_Pai.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.Pn_Pai.ShadowTopLeftVisible = false;
-            this.Pn_Pai.Size = new System.Drawing.Size(1202, 742);
+            this.Pn_Pai.Size = new System.Drawing.Size(1511, 808);
             this.Pn_Pai.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.Pn_Pai.TabIndex = 1;
             // 
@@ -188,12 +188,12 @@ namespace SICP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1351, 752);
+            this.ClientSize = new System.Drawing.Size(1660, 818);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = " ";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
