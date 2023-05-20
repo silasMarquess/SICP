@@ -35,5 +35,10 @@ namespace SICP
         {
             _control.AddPainelFilho(new FrmCimento());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _control.AddPainelFilho(new FrmProdutoSN());
+        }
     }
 }
