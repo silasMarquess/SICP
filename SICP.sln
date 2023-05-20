@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SICP", "SICP\SICP.csproj", "{450B50E7-6F6B-4B6A-8599-3486A1797702}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{450B50E7-6F6B-4B6A-8599-3486A1797702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450B50E7-6F6B-4B6A-8599-3486A1797702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450B50E7-6F6B-4B6A-8599-3486A1797702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450B50E7-6F6B-4B6A-8599-3486A1797702}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AA4E252-B076-4134-B11D-ABC231B8E1BD}
+	EndGlobalSection
+EndGlobal
