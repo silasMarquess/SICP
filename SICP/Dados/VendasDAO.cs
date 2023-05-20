@@ -11,6 +11,8 @@ namespace SICP.Dados
 {
     class VendasDAO
     {
+
+        //inserindo novas Vendas
         public static void InsertNewVenda(Venda v)
         {
             string query = "insert into tb_venda(codVenda, TotalVenda,desconto,adicional,cliente) values(@codVenda, @TotalVenda,@desconto,@adicional,@cliente)";
