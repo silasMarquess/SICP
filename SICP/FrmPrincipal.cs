@@ -40,5 +40,10 @@ namespace SICP
         {
             _control.AddPainelFilho(new FrmProdutoSN());
         }
+
+        private void Pn_Pai_ControlAdded(object sender, ControlEventArgs e)
+        {
+
+        }
     }
 }

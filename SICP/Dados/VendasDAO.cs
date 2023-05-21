@@ -25,17 +25,7 @@ namespace SICP.Dados
             cmd.ExecuteNonQuery();
         }
 
-        public static void InsertItensVenda(Venda v)
-        {
-            
-            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
-
-            foreach (Item i in v.ListaItens) { }
-            {
-
-            }
-        }
-
+       
         public static void InsertItemsToVenda(Venda v)
         {
             string query = "insert into tb_item(qtde,codMat,codVenda) " +
