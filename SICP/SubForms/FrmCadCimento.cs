@@ -16,5 +16,10 @@ namespace SICP.SubForms
         {
             InitializeComponent();
         }
+
+        private void btn_FecharJanela_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

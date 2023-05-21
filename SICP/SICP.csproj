@@ -126,11 +126,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ControlFormPrincipal.cs" />
+    <Compile Include="Controller\ControlFrmCadCimento.cs" />
     <Compile Include="Dados\ConexaoDAO.cs" />
     <Compile Include="Dados\MaterialDAO.cs" />
     <Compile Include="Dados\VendasDAO.cs" />
     <Compile Include="Entidades\enums\TipoMaterial.cs" />
     <Compile Include="Entidades\Item.cs" />
+    <Compile Include="Entidades\MarcaCimento.cs" />
     <Compile Include="Entidades\MatConstrucao.cs" />
     <Compile Include="Entidades\Venda.cs" />
     <Compile Include="FrmPrincipal.cs">

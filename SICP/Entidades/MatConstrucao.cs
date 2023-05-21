@@ -12,9 +12,10 @@ namespace SICP.Entidades
         public string Cod { get; set; }
         public string Descricao { get; set; }
         public decimal Custo { get; set; }
-        public decimal ValLucro  { get; private set; }
+        public decimal ValLucro  { get;  set; }
         public TipoMaterial Tipo { get; set; }
-        public int QtdeEstoque { get; private set; }
+        public int QtdeEstoque { get; set; }
+
 
         public MatConstrucao(string cod, string descricao, decimal custo, decimal taxaLucro, TipoMaterial tipo)
         {
@@ -23,6 +24,11 @@ namespace SICP.Entidades
             Custo = custo;
             ValLucro = taxaLucro;
             Tipo = tipo;
+        }
+
+        public MatConstrucao()
+        {
+                
         }
 
         public decimal CalculaValorLucro(decimal taxaLucro)

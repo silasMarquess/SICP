@@ -85,5 +85,68 @@ namespace SICP.Dados
             MySqlDataReader r = cmd.ExecuteReader();
             return (r.Read()) ? true : false;
         }
+
+        public static bool VerificaSeCodeExist(string codigo)
+        {
+            string query = "select cod tb_MatConst where cod=@codigo";
+            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            MySqlDataReader rd = cmd.ExecuteReader();
+            return (rd.Read()) ? true : false;
+
+        }
+
+        public static void InsertMarcaCimento(MarcaCimento m)
+        {
+            string query = "insert into tb_marcaCimento(nome) values(@nomd)";
+            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            cmd.Parameters.AddWithValue("@nome",m.Nome);
+            cmd.ExecuteNonQuery();
+
+        }
+
+        public static void UpdateMarcaCimento(MarcaCimento m)
+        {
+            string query = "update tb_marcaCimento set nome =@nome " +
+                "where id = @id";
+            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            cmd.Parameters.AddWithValue("@nome", m.Nome);
+            cmd.Parameters.AddWithValue("@id", m.Id);
+            cmd.ExecuteNonQuery();
+        }
+
+        public static List<MarcaCimento> GetListaMarcaCimento()
+        {
+            List<MarcaCimento> lista = new List<MarcaCimento>();
+            string query = "select * from tb_marcaCimento";
+            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            MySqlDataReader rd = cmd.ExecuteReader();
+
+            while (rd.Read())
+            {
+                int id = rd.GetInt32("id");
+                string nome = rd.GetString("nome");
+                MarcaCimento marca = new MarcaCimento(id, nome);
+                lista.Add(marca);
+            }
+            return lista;
+        }
+
+
+        public static void DeleteMarcaCimento(MarcaCimento m)
+        {
+            string query = "delete from tb_marcaCimento where id = @id";
+            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            cmd.Parameters.AddWithValue("@id", m.Id);
+            cmd.ExecuteNonQuery();
+        }
+
+
+        public static bool VerificaSeMarcaCimentoJaExiste(MarcaCimento marca)
+        {
+            string query = "select * from tb_marcaCimento where nome =@nome";
+            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            MySqlDataReader rd = cmd.ExecuteReader();
+            return (rd.Read()) ? true : false;
+        }
     }
 }
