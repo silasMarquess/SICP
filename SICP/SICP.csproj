@@ -127,9 +127,12 @@
   <ItemGroup>
     <Compile Include="Controller\ControlFormPrincipal.cs" />
     <Compile Include="Controller\ControlFrmCadCimento.cs" />
+    <Compile Include="Controller\ControlRegCimentos.cs" />
+    <Compile Include="Controller\ControlRegMatConstrucao.cs" />
     <Compile Include="Dados\ConexaoDAO.cs" />
     <Compile Include="Dados\MaterialDAO.cs" />
     <Compile Include="Dados\VendasDAO.cs" />
+    <Compile Include="DomainsException.cs" />
     <Compile Include="Entidades\enums\TipoMaterial.cs" />
     <Compile Include="Entidades\Item.cs" />
     <Compile Include="Entidades\MarcaCimento.cs" />

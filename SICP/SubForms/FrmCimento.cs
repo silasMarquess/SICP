@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SICP.SubForms;
+using SICP.Controller;
+
 
 namespace SICP.SubForms
 {
     public partial class FrmCimento : Form
     {
+        private ControlRegCimentos _control;
         public FrmCimento()
         {
             InitializeComponent();
+            _control = new ControlRegCimentos(this);
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

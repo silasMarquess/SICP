@@ -23,6 +23,7 @@ namespace SICP.Controller
         public void ControlRegistraMarcasCimento()
         {
             //CRIANDO OBJETO:
+            this.ValidaCadastro();
             MatConstrucao mat = new MatConstrucao();
             mat.Cod = GenerateCodigo();
             mat.Descricao = _form.txt_NomeMarcaCimento.Text;
@@ -32,13 +33,25 @@ namespace SICP.Controller
             mat.QtdeEstoque = int.Parse(_form.Cb_EstoqueInicial.SelectedItem.ToString());
 
             //INSERIR OBJETO NO BANCO DE DADOS:
+            bool teste = MaterialDAO.VerificaSeMatExist(mat);
+            if (teste) throw new DomainsException("Erro: Material ja está cadastrado");
             ConexaoDAO.ModifyOperation(MaterialDAO.InsertNewMaterial, mat);
-
             System.Windows.Forms.MessageBox.Show("Material Inserido com sucesso !");
-
         }
 
-        
+        public void ValidaCadastro()
+        {
+            if (_form.txt_NomeMarcaCimento.Text == string.Empty) throw new DomainsException("Campo de nome não pode ser vazio");
+        }
+
+        public void PreperadaControles()
+        {
+            //preenche combox Unidades
+            for(int i = 0; i < 1000; i++)
+            {
+                _form.Cb_EstoqueInicial.Items.Add(i);
+            }
+        }
 
 
         public string GenerateCodigo()

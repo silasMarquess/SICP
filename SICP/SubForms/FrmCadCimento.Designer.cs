@@ -29,13 +29,15 @@ namespace SICP.SubForms
         /// </summary>
         private void InitializeComponent()
         {
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCimento));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.lb_codigoMat = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_FecharJanela = new System.Windows.Forms.Button();
             this.btn_CadastrarMarca = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.NumUp_ValorVenda = new System.Windows.Forms.NumericUpDown();
@@ -51,9 +53,6 @@ namespace SICP.SubForms
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.button3 = new System.Windows.Forms.Button();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lb_codigoMat = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_ValorVenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_PerLucro)).BeginInit();
@@ -68,7 +67,6 @@ namespace SICP.SubForms
             this.bunifuCards1.color = System.Drawing.Color.Turquoise;
             this.bunifuCards1.Controls.Add(this.bunifuSeparator2);
             this.bunifuCards1.Controls.Add(this.lb_codigoMat);
-            this.bunifuCards1.Controls.Add(this.bunifuLabel7);
             this.bunifuCards1.Controls.Add(this.btn_FecharJanela);
             this.bunifuCards1.Controls.Add(this.btn_CadastrarMarca);
             this.bunifuCards1.Controls.Add(this.NumUp_ValorVenda);
@@ -92,6 +90,38 @@ namespace SICP.SubForms
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(558, 342);
             this.bunifuCards1.TabIndex = 1;
+            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(176, 15);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(14, 30);
+            this.bunifuSeparator2.TabIndex = 25;
+            // 
+            // lb_codigoMat
+            // 
+            this.lb_codigoMat.AllowParentOverrides = false;
+            this.lb_codigoMat.AutoEllipsis = false;
+            this.lb_codigoMat.CursorType = null;
+            this.lb_codigoMat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lb_codigoMat.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lb_codigoMat.Location = new System.Drawing.Point(193, 15);
+            this.lb_codigoMat.Name = "lb_codigoMat";
+            this.lb_codigoMat.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_codigoMat.Size = new System.Drawing.Size(81, 30);
+            this.lb_codigoMat.TabIndex = 24;
+            this.lb_codigoMat.Text = "MC0000";
+            this.lb_codigoMat.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lb_codigoMat.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btn_FecharJanela
             // 
@@ -125,11 +155,11 @@ namespace SICP.SubForms
             this.btn_CadastrarMarca.ColorContrastOnClick = 45;
             this.btn_CadastrarMarca.ColorContrastOnHover = 45;
             this.btn_CadastrarMarca.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_CadastrarMarca.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btn_CadastrarMarca.CustomizableEdges = borderEdges3;
             this.btn_CadastrarMarca.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_CadastrarMarca.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_CadastrarMarca.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -207,6 +237,7 @@ namespace SICP.SubForms
             this.NumUp_ValorVenda.Size = new System.Drawing.Size(161, 29);
             this.NumUp_ValorVenda.TabIndex = 20;
             this.NumUp_ValorVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumUp_ValorVenda.ValueChanged += new System.EventHandler(this.NumUp_ValorVenda_ValueChanged);
             // 
             // bunifuLabel6
             // 
@@ -235,6 +266,7 @@ namespace SICP.SubForms
             this.NumUp_PerLucro.Size = new System.Drawing.Size(112, 29);
             this.NumUp_PerLucro.TabIndex = 18;
             this.NumUp_PerLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumUp_PerLucro.ValueChanged += new System.EventHandler(this.NumUp_PerLucro_ValueChanged);
             // 
             // bunifuLabel5
             // 
@@ -369,26 +401,26 @@ namespace SICP.SubForms
             this.txt_NomeMarcaCimento.Modified = false;
             this.txt_NomeMarcaCimento.Multiline = false;
             this.txt_NomeMarcaCimento.Name = "txt_NomeMarcaCimento";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_NomeMarcaCimento.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_NomeMarcaCimento.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_NomeMarcaCimento.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_NomeMarcaCimento.OnIdleState = stateProperties4;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_NomeMarcaCimento.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_NomeMarcaCimento.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_NomeMarcaCimento.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_NomeMarcaCimento.OnIdleState = stateProperties12;
             this.txt_NomeMarcaCimento.Padding = new System.Windows.Forms.Padding(3);
             this.txt_NomeMarcaCimento.PasswordChar = '\0';
             this.txt_NomeMarcaCimento.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -469,53 +501,6 @@ namespace SICP.SubForms
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.bunifuLabel7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bunifuLabel7.Location = new System.Drawing.Point(202, 156);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(155, 30);
-            this.bunifuLabel7.TabIndex = 23;
-            this.bunifuLabel7.Text = "Tela de Cadastro";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lb_codigoMat
-            // 
-            this.lb_codigoMat.AllowParentOverrides = false;
-            this.lb_codigoMat.AutoEllipsis = false;
-            this.lb_codigoMat.CursorType = null;
-            this.lb_codigoMat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lb_codigoMat.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lb_codigoMat.Location = new System.Drawing.Point(193, 15);
-            this.lb_codigoMat.Name = "lb_codigoMat";
-            this.lb_codigoMat.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_codigoMat.Size = new System.Drawing.Size(81, 30);
-            this.lb_codigoMat.TabIndex = 24;
-            this.lb_codigoMat.Text = "MC0000";
-            this.lb_codigoMat.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lb_codigoMat.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
-            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(176, 15);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(14, 30);
-            this.bunifuSeparator2.TabIndex = 25;
-            // 
             // FrmCadCimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,6 +539,5 @@ namespace SICP.SubForms
         public System.Windows.Forms.Button btn_FecharJanela;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         public Bunifu.UI.WinForms.BunifuLabel lb_codigoMat;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
     }
 }
