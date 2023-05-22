@@ -129,6 +129,7 @@
     <Compile Include="Controller\ControlFrmCadCimento.cs" />
     <Compile Include="Controller\ControlRegCimentos.cs" />
     <Compile Include="Controller\ControlRegMatConstrucao.cs" />
+    <Compile Include="Controller\ControlVendaCimento.cs" />
     <Compile Include="Dados\ConexaoDAO.cs" />
     <Compile Include="Dados\MaterialDAO.cs" />
     <Compile Include="Dados\VendasDAO.cs" />

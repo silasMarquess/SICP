@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SICP.Controller;
+using SICP.Entidades.enums;
+using SICP.Entidades;
 
 namespace SICP.SubForms
 {
-    public partial class FrmCadCimento : Form
+     partial class FrmCadCimento : Form
     {
         private ControlFrmCadCimento _control;
 
@@ -20,6 +22,18 @@ namespace SICP.SubForms
             InitializeComponent();
             _control = new ControlFrmCadCimento(this);
             _control.PreperadaControles();
+        }
+
+        public FrmCadCimento(MatConstrucao mat)
+        {
+            InitializeComponent();
+            _control = new ControlFrmCadCimento(this);
+            _control.PreperadaControles();
+            txt_NomeMarcaCimento.Text = mat.Descricao;
+            Cb_EstoqueInicial.Text = mat.QtdeEstoque.ToString();
+            NumUp_ValorCusto.Value = mat.Custo;
+            NumUp_PerLucro.Value = (mat.ValLucro / mat.Custo)*100;
+            NumUp_PerLucro.Value = mat.CalculaValorVenda();
         }
 
         private void btn_FecharJanela_Click(object sender, EventArgs e)
