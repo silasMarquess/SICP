@@ -30,7 +30,7 @@ namespace SICP.Controller
         
 
 
-        //delegates
+        //DELEGATE
         public bool VerificaSeCimento(MatConstrucao mat)
         {
             return (mat.Tipo == TipoMaterial.CIMENTO) ? true : false;
