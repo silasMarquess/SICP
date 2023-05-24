@@ -11,6 +11,8 @@ namespace SICP.Dados
 {
     class VendasDAO
     {
+
+        //inserindo novas Vendas
         public static void InsertNewVenda(Venda v)
         {
             string query = "insert into tb_venda(codVenda, TotalVenda,desconto,adicional,cliente) values(@codVenda, @TotalVenda,@desconto,@adicional,@cliente)";
@@ -23,17 +25,7 @@ namespace SICP.Dados
             cmd.ExecuteNonQuery();
         }
 
-        public static void InsertItensVenda(Venda v)
-        {
-            
-            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
-
-            foreach (Item i in v.ListaItens) { }
-            {
-
-            }
-        }
-
+       
         public static void InsertItemsToVenda(Venda v)
         {
             string query = "insert into tb_item(qtde,codMat,codVenda) " +

@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SICP</RootNamespace>
     <AssemblyName>SICP</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -125,11 +126,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ControlFormPrincipal.cs" />
+    <Compile Include="Controller\ControlFrmCadCimento.cs" />
+    <Compile Include="Controller\ControlRegCimentos.cs" />
+    <Compile Include="Controller\ControlRegMatConstrucao.cs" />
     <Compile Include="Dados\ConexaoDAO.cs" />
     <Compile Include="Dados\MaterialDAO.cs" />
     <Compile Include="Dados\VendasDAO.cs" />
+    <Compile Include="DomainsException.cs" />
     <Compile Include="Entidades\enums\TipoMaterial.cs" />
     <Compile Include="Entidades\Item.cs" />
+    <Compile Include="Entidades\MarcaCimento.cs" />
     <Compile Include="Entidades\MatConstrucao.cs" />
     <Compile Include="Entidades\Venda.cs" />
     <Compile Include="FrmPrincipal.cs">
