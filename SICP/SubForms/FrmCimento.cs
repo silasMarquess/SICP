@@ -48,5 +48,50 @@ namespace SICP.SubForms
         {
 
         }
+
+        private void FrmCimento_Load(object sender, EventArgs e)
+        {
+            _control.GetListaCimentoGalpao();
+        }
+
+        private void Lv_ListaCimentoGalpao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dELETARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _control.ControlDeleteMarca();
+
+            }
+            catch (DomainsException ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show("ERRO: Nada Selecionado !");
+            }
+        }
+
+        private void eDITARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _control.ControlUpdateCimento();
+
+            }
+            catch (DomainsException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show("ERRO: Nada Selecionado !");
+            }
+        }
     }
 }

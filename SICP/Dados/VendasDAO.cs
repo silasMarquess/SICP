@@ -107,7 +107,7 @@ namespace SICP.Dados
                 decimal valorlucro = read.GetDecimal("vallucro");
                 TipoMaterial tipoMat = (TipoMaterial)read.GetInt32("tipoMat");
                 int Estoque = read.GetInt32("estoque");
-                MatConstrucao mat = new MatConstrucao(codigoMat, descricao, valorCusto, valorlucro, tipoMat);
+                MatConstrucao mat = new MatConstrucao(codigoMat, descricao, valorCusto, valorlucro, tipoMat,Estoque);
                 v.AddNewItem(new Item(id, qtde, mat));
             }
         }

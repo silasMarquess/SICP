@@ -37,12 +37,12 @@ namespace SICP.Dados
             while (read.Read())
             {
                 string descricao = read.GetString("descricao");
-                string codigp = read.GetString("codigo");
+                string codigp = read.GetString("cod");
                 decimal custo = read.GetDecimal("valcusto");
-                decimal lucro = read.GetDecimal("lucro");
-                TipoMaterial tipo = (TipoMaterial)read.GetInt16("tipo");
+                decimal lucro = read.GetDecimal("vallucro");
+                TipoMaterial tipo = (TipoMaterial)read.GetInt16("tipomat");
                 int estoque = read.GetInt16("estoque");
-                lista.Add(new MatConstrucao(codigp, descricao, custo, lucro, tipo));
+                lista.Add(new MatConstrucao(codigp, descricao, custo, lucro, tipo,estoque));
             }
             return lista;
         }
@@ -72,7 +72,7 @@ namespace SICP.Dados
 
         public static void DeleteMat(MatConstrucao mat)
         {
-            string query = "delete * from tb_matconst where cod =@cod";
+            string query = "delete from tb_matconst where cod =@cod";
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
             cmd.Parameters.AddWithValue("@cod", mat.Cod);
             cmd.ExecuteNonQuery();

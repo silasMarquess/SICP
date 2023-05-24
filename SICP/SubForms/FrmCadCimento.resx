@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_EditarDados.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJAAAAAkCAYAAABmHbPbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACESURBVHhe7dwxEYAwAARBpMVZ4hxIgQBy7f7MOrj6rznn
+        eC04MHZA690Nf+12BMQxAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAk
+        AiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgki8gF3ccmuMBjTXY2DS+E+IAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Lb_ValLucro.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 14pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(30, 144, 255); text-align: left; }</value>
+  </data>
   <data name="bunifuSeparator2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA4AAAAeCAYAAAAcni9KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -130,11 +141,11 @@
   </data>
   <data name="btn_CadastrarMarca.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAALsAAAAkCAYAAADRoEv8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVHhe7d1BEcAgAAPBSsMZOG/hURPcZmYd3D/PnHNs
-        Cy43Tuxr74Wbnc7FToLYyRA7GWInQ+xkiJ0MsZMhdjLETobYyRA7GWInQ+xkiJ0MsZMhdjLETobYyRA7
-        GWInQ+xkiJ0MsZMhdjLETobYyRA7GWInQ+xkiJ0MsZMhdjLETsYfu5sZAub4AP2dxgFrpfEsAAAAAElF
-        TkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAkCAYAAACT4zhrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACGSURBVHhe7dwxEcAwEAPBQDOzN/PELkLhqtXMMrhaz8ys
+        Y0Nk3ej22QuF25voSImOnOjIiY6c6MiJjpzoyImOnOjIiY6c6MiJjpzoyImOnOjIiY6c6MiJjpzoyImO
+        nOjIiY6c6MiJjpzoyImOnOjIiY6c6MiJjpzoyImOnOjI/dG5fyU06wNJ0VwbBhYexgAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
@@ -167,7 +178,7 @@
         AAAAAAAAAAAAALCi7ZEkSfrpbQQAAAAAAAAAAAAAAACD5AIoWLJL4JNVIQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+  <data name="LB_Operacao.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 16pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
   </data>
 </root>

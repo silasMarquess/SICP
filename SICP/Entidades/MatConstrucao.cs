@@ -17,18 +17,23 @@ namespace SICP.Entidades
         public int QtdeEstoque { get; set; }
 
 
-        public MatConstrucao(string cod, string descricao, decimal custo, decimal taxaLucro, TipoMaterial tipo)
+        public MatConstrucao(string cod, string descricao, decimal custo, decimal taxaLucro, TipoMaterial tipo, int Estoque)
         {
             Cod = cod;
             Descricao = descricao;
             Custo = custo;
             ValLucro = taxaLucro;
             Tipo = tipo;
+            QtdeEstoque = Estoque;
         }
 
         public MatConstrucao()
         {
                 
+        }
+        public decimal CalculaLucroTotal()
+        {
+            return QtdeEstoque * ValLucro;
         }
 
         public decimal CalculaValorLucro(decimal taxaLucro)

@@ -29,7 +29,7 @@ namespace SICP.Controller
             //MOSTRANDO LISTA 
             foreach (MatConstrucao i in _listaCimentos)
             {
-                ListViewItem item = new ListViewItem(new string[] { i.Cod, i.Descricao, i.Custo.ToString(), i.QtdeEstoque.ToString() });
+                ListViewItem item = new ListViewItem(new string[] { i.Cod, i.Descricao.ToUpper(), i.CalculaValorVenda().ToString() + " R$", i.QtdeEstoque.ToString(), i.ValLucro.ToString() + " R$", i.CalculaLucroTotal().ToString() + " R$", i.Custo.ToString()+" R$" }); ;
                 _form.Lv_ListaCimentoGalpao.Items.Add(item);
             }
         }
@@ -39,6 +39,7 @@ namespace SICP.Controller
             DialogResult res = MessageBox.Show("Deseja realmente deletar o material selecionado ?", "Confirme:", MessageBoxButtons.YesNo);
             if (res == DialogResult.No) throw new DomainsException("Operação cancelada com sucesso !");
             MatConstrucao CimentoSelecionado = _listaCimentos.Find(GetCimentoForCod);
+            if (CimentoSelecionado == null) throw new DomainsException("");
             ConexaoDAO.ModifyOperation(MaterialDAO.DeleteMat, CimentoSelecionado);
             MessageBox.Show("Material selecionado deletado com sucesso !");
         }
@@ -51,10 +52,6 @@ namespace SICP.Controller
         }
 
 
-
-
-
-
         //DELEGATE
         public bool VerificaSeCimento(MatConstrucao mat)
         {
@@ -63,8 +60,8 @@ namespace SICP.Controller
 
         public bool GetCimentoForCod(MatConstrucao mat)
         {
-            int index = _form.Lv_ListaCimentoGalpao.SelectedIndices[0];
-            string codigo = _form.Lv_ListaCimentoGalpao.SelectedItems[index].SubItems[0].Text;
+            int index = _form.Lv_ListaCimentoGalpao.CheckedIndices[0];
+            string codigo = _form.Lv_ListaCimentoGalpao.Items[index].SubItems[0].Text;
             return (mat.Cod == codigo) ? true : false;
         }
 

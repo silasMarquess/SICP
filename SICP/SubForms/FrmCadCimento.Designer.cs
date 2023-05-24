@@ -31,11 +31,14 @@ namespace SICP.SubForms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCimento));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_EditarDados = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.Lb_ValLucro = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.lb_codigoMat = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_FecharJanela = new System.Windows.Forms.Button();
@@ -52,7 +55,7 @@ namespace SICP.SubForms
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.button3 = new System.Windows.Forms.Button();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LB_Operacao = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_ValorVenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_PerLucro)).BeginInit();
@@ -65,6 +68,8 @@ namespace SICP.SubForms
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Turquoise;
+            this.bunifuCards1.Controls.Add(this.btn_EditarDados);
+            this.bunifuCards1.Controls.Add(this.Lb_ValLucro);
             this.bunifuCards1.Controls.Add(this.bunifuSeparator2);
             this.bunifuCards1.Controls.Add(this.lb_codigoMat);
             this.bunifuCards1.Controls.Add(this.btn_FecharJanela);
@@ -81,7 +86,7 @@ namespace SICP.SubForms
             this.bunifuCards1.Controls.Add(this.bunifuLabel2);
             this.bunifuCards1.Controls.Add(this.bunifuSeparator1);
             this.bunifuCards1.Controls.Add(this.button3);
-            this.bunifuCards1.Controls.Add(this.bunifuLabel1);
+            this.bunifuCards1.Controls.Add(this.LB_Operacao);
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
@@ -92,6 +97,113 @@ namespace SICP.SubForms
             this.bunifuCards1.TabIndex = 1;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
+            // btn_EditarDados
+            // 
+            this.btn_EditarDados.AllowAnimations = true;
+            this.btn_EditarDados.AllowMouseEffects = true;
+            this.btn_EditarDados.AllowToggling = false;
+            this.btn_EditarDados.AnimationSpeed = 200;
+            this.btn_EditarDados.AutoGenerateColors = false;
+            this.btn_EditarDados.AutoRoundBorders = false;
+            this.btn_EditarDados.AutoSizeLeftIcon = true;
+            this.btn_EditarDados.AutoSizeRightIcon = true;
+            this.btn_EditarDados.BackColor = System.Drawing.Color.Transparent;
+            this.btn_EditarDados.BackColor1 = System.Drawing.Color.Gray;
+            this.btn_EditarDados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_EditarDados.BackgroundImage")));
+            this.btn_EditarDados.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_EditarDados.ButtonText = "ATUALIZAR DADOS";
+            this.btn_EditarDados.ButtonTextMarginLeft = 0;
+            this.btn_EditarDados.ColorContrastOnClick = 45;
+            this.btn_EditarDados.ColorContrastOnHover = 45;
+            this.btn_EditarDados.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_EditarDados.CustomizableEdges = borderEdges1;
+            this.btn_EditarDados.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_EditarDados.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn_EditarDados.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_EditarDados.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_EditarDados.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btn_EditarDados.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_EditarDados.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarDados.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_EditarDados.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_EditarDados.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btn_EditarDados.IconMarginLeft = 11;
+            this.btn_EditarDados.IconPadding = 10;
+            this.btn_EditarDados.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_EditarDados.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_EditarDados.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btn_EditarDados.IconSize = 25;
+            this.btn_EditarDados.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btn_EditarDados.IdleBorderRadius = 1;
+            this.btn_EditarDados.IdleBorderThickness = 1;
+            this.btn_EditarDados.IdleFillColor = System.Drawing.Color.Gray;
+            this.btn_EditarDados.IdleIconLeftImage = null;
+            this.btn_EditarDados.IdleIconRightImage = null;
+            this.btn_EditarDados.IndicateFocus = false;
+            this.btn_EditarDados.Location = new System.Drawing.Point(400, 285);
+            this.btn_EditarDados.Name = "btn_EditarDados";
+            this.btn_EditarDados.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn_EditarDados.OnDisabledState.BorderRadius = 1;
+            this.btn_EditarDados.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_EditarDados.OnDisabledState.BorderThickness = 1;
+            this.btn_EditarDados.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_EditarDados.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_EditarDados.OnDisabledState.IconLeftImage = null;
+            this.btn_EditarDados.OnDisabledState.IconRightImage = null;
+            this.btn_EditarDados.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btn_EditarDados.onHoverState.BorderRadius = 1;
+            this.btn_EditarDados.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_EditarDados.onHoverState.BorderThickness = 1;
+            this.btn_EditarDados.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btn_EditarDados.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarDados.onHoverState.IconLeftImage = null;
+            this.btn_EditarDados.onHoverState.IconRightImage = null;
+            this.btn_EditarDados.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_EditarDados.OnIdleState.BorderRadius = 1;
+            this.btn_EditarDados.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_EditarDados.OnIdleState.BorderThickness = 1;
+            this.btn_EditarDados.OnIdleState.FillColor = System.Drawing.Color.Gray;
+            this.btn_EditarDados.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarDados.OnIdleState.IconLeftImage = null;
+            this.btn_EditarDados.OnIdleState.IconRightImage = null;
+            this.btn_EditarDados.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btn_EditarDados.OnPressedState.BorderRadius = 1;
+            this.btn_EditarDados.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_EditarDados.OnPressedState.BorderThickness = 1;
+            this.btn_EditarDados.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btn_EditarDados.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarDados.OnPressedState.IconLeftImage = null;
+            this.btn_EditarDados.OnPressedState.IconRightImage = null;
+            this.btn_EditarDados.Size = new System.Drawing.Size(144, 36);
+            this.btn_EditarDados.TabIndex = 27;
+            this.btn_EditarDados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_EditarDados.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_EditarDados.TextMarginLeft = 0;
+            this.btn_EditarDados.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btn_EditarDados.UseDefaultRadiusAndThickness = true;
+            // 
+            // Lb_ValLucro
+            // 
+            this.Lb_ValLucro.AllowParentOverrides = false;
+            this.Lb_ValLucro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Lb_ValLucro.AutoEllipsis = false;
+            this.Lb_ValLucro.BackColor = System.Drawing.SystemColors.Info;
+            this.Lb_ValLucro.CursorType = null;
+            this.Lb_ValLucro.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Lb_ValLucro.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Lb_ValLucro.Location = new System.Drawing.Point(269, 225);
+            this.Lb_ValLucro.Name = "Lb_ValLucro";
+            this.Lb_ValLucro.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Lb_ValLucro.Size = new System.Drawing.Size(24, 25);
+            this.Lb_ValLucro.TabIndex = 26;
+            this.Lb_ValLucro.Text = "---";
+            this.Lb_ValLucro.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Lb_ValLucro.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
@@ -101,7 +213,7 @@ namespace SICP.SubForms
             this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(176, 15);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(197, 15);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator2.Size = new System.Drawing.Size(14, 30);
@@ -114,7 +226,7 @@ namespace SICP.SubForms
             this.lb_codigoMat.CursorType = null;
             this.lb_codigoMat.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lb_codigoMat.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lb_codigoMat.Location = new System.Drawing.Point(193, 15);
+            this.lb_codigoMat.Location = new System.Drawing.Point(214, 15);
             this.lb_codigoMat.Name = "lb_codigoMat";
             this.lb_codigoMat.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_codigoMat.Size = new System.Drawing.Size(81, 30);
@@ -155,11 +267,11 @@ namespace SICP.SubForms
             this.btn_CadastrarMarca.ColorContrastOnClick = 45;
             this.btn_CadastrarMarca.ColorContrastOnHover = 45;
             this.btn_CadastrarMarca.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_CadastrarMarca.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn_CadastrarMarca.CustomizableEdges = borderEdges2;
             this.btn_CadastrarMarca.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_CadastrarMarca.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_CadastrarMarca.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -183,7 +295,7 @@ namespace SICP.SubForms
             this.btn_CadastrarMarca.IdleIconLeftImage = null;
             this.btn_CadastrarMarca.IdleIconRightImage = null;
             this.btn_CadastrarMarca.IndicateFocus = false;
-            this.btn_CadastrarMarca.Location = new System.Drawing.Point(17, 252);
+            this.btn_CadastrarMarca.Location = new System.Drawing.Point(15, 285);
             this.btn_CadastrarMarca.Name = "btn_CadastrarMarca";
             this.btn_CadastrarMarca.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_CadastrarMarca.OnDisabledState.BorderRadius = 1;
@@ -217,7 +329,7 @@ namespace SICP.SubForms
             this.btn_CadastrarMarca.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_CadastrarMarca.OnPressedState.IconLeftImage = null;
             this.btn_CadastrarMarca.OnPressedState.IconRightImage = null;
-            this.btn_CadastrarMarca.Size = new System.Drawing.Size(187, 36);
+            this.btn_CadastrarMarca.Size = new System.Drawing.Size(157, 36);
             this.btn_CadastrarMarca.TabIndex = 21;
             this.btn_CadastrarMarca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_CadastrarMarca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -233,9 +345,14 @@ namespace SICP.SubForms
             this.NumUp_ValorVenda.DecimalPlaces = 2;
             this.NumUp_ValorVenda.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumUp_ValorVenda.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.NumUp_ValorVenda.Location = new System.Drawing.Point(383, 189);
+            this.NumUp_ValorVenda.Location = new System.Drawing.Point(355, 189);
+            this.NumUp_ValorVenda.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NumUp_ValorVenda.Name = "NumUp_ValorVenda";
-            this.NumUp_ValorVenda.Size = new System.Drawing.Size(161, 29);
+            this.NumUp_ValorVenda.Size = new System.Drawing.Size(189, 29);
             this.NumUp_ValorVenda.TabIndex = 20;
             this.NumUp_ValorVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumUp_ValorVenda.ValueChanged += new System.EventHandler(this.NumUp_ValorVenda_ValueChanged);
@@ -262,9 +379,14 @@ namespace SICP.SubForms
             this.NumUp_PerLucro.DecimalPlaces = 2;
             this.NumUp_PerLucro.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumUp_PerLucro.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.NumUp_PerLucro.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.NumUp_PerLucro.Location = new System.Drawing.Point(227, 189);
             this.NumUp_PerLucro.Name = "NumUp_PerLucro";
-            this.NumUp_PerLucro.Size = new System.Drawing.Size(112, 29);
+            this.NumUp_PerLucro.Size = new System.Drawing.Size(122, 29);
             this.NumUp_PerLucro.TabIndex = 18;
             this.NumUp_PerLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumUp_PerLucro.ValueChanged += new System.EventHandler(this.NumUp_PerLucro_ValueChanged);
@@ -291,9 +413,14 @@ namespace SICP.SubForms
             this.NumUp_ValorCusto.DecimalPlaces = 2;
             this.NumUp_ValorCusto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumUp_ValorCusto.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.NumUp_ValorCusto.Location = new System.Drawing.Point(19, 189);
+            this.NumUp_ValorCusto.Location = new System.Drawing.Point(15, 189);
+            this.NumUp_ValorCusto.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NumUp_ValorCusto.Name = "NumUp_ValorCusto";
-            this.NumUp_ValorCusto.Size = new System.Drawing.Size(177, 29);
+            this.NumUp_ValorCusto.Size = new System.Drawing.Size(202, 29);
             this.NumUp_ValorCusto.TabIndex = 16;
             this.NumUp_ValorCusto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -303,7 +430,7 @@ namespace SICP.SubForms
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(40, 162);
+            this.bunifuLabel4.Location = new System.Drawing.Point(42, 162);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(130, 21);
@@ -384,7 +511,7 @@ namespace SICP.SubForms
             this.txt_NomeMarcaCimento.BorderColorIdle = System.Drawing.Color.Silver;
             this.txt_NomeMarcaCimento.BorderRadius = 1;
             this.txt_NomeMarcaCimento.BorderThickness = 1;
-            this.txt_NomeMarcaCimento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_NomeMarcaCimento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_NomeMarcaCimento.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_NomeMarcaCimento.DefaultFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.txt_NomeMarcaCimento.DefaultText = "";
@@ -425,7 +552,7 @@ namespace SICP.SubForms
             this.txt_NomeMarcaCimento.Padding = new System.Windows.Forms.Padding(3);
             this.txt_NomeMarcaCimento.PasswordChar = '\0';
             this.txt_NomeMarcaCimento.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NomeMarcaCimento.PlaceholderText = "Enter text";
+            this.txt_NomeMarcaCimento.PlaceholderText = "ENTER TEXT";
             this.txt_NomeMarcaCimento.ReadOnly = false;
             this.txt_NomeMarcaCimento.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NomeMarcaCimento.SelectedText = "";
@@ -439,7 +566,7 @@ namespace SICP.SubForms
             this.txt_NomeMarcaCimento.TextMarginBottom = 0;
             this.txt_NomeMarcaCimento.TextMarginLeft = 3;
             this.txt_NomeMarcaCimento.TextMarginTop = 0;
-            this.txt_NomeMarcaCimento.TextPlaceholder = "Enter text";
+            this.txt_NomeMarcaCimento.TextPlaceholder = "ENTER TEXT";
             this.txt_NomeMarcaCimento.UseSystemPasswordChar = false;
             this.txt_NomeMarcaCimento.WordWrap = true;
             // 
@@ -486,21 +613,21 @@ namespace SICP.SubForms
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // bunifuLabel1
+            // LB_Operacao
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bunifuLabel1.Location = new System.Drawing.Point(17, 15);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(155, 30);
-            this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "Tela de Cadastro";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LB_Operacao.AllowParentOverrides = false;
+            this.LB_Operacao.AutoEllipsis = false;
+            this.LB_Operacao.CursorType = null;
+            this.LB_Operacao.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.LB_Operacao.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LB_Operacao.Location = new System.Drawing.Point(17, 15);
+            this.LB_Operacao.Name = "LB_Operacao";
+            this.LB_Operacao.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LB_Operacao.Size = new System.Drawing.Size(155, 30);
+            this.LB_Operacao.TabIndex = 1;
+            this.LB_Operacao.Text = "Tela de Cadastro";
+            this.LB_Operacao.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LB_Operacao.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // FrmCadCimento
             // 
@@ -525,7 +652,6 @@ namespace SICP.SubForms
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
@@ -541,5 +667,8 @@ namespace SICP.SubForms
         public System.Windows.Forms.Button btn_FecharJanela;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         public Bunifu.UI.WinForms.BunifuLabel lb_codigoMat;
+        private Bunifu.UI.WinForms.BunifuLabel Lb_ValLucro;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_EditarDados;
+        public Bunifu.UI.WinForms.BunifuLabel LB_Operacao;
     }
 }
