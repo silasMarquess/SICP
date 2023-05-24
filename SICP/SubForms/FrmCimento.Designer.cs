@@ -47,7 +47,7 @@ namespace SICP.SubForms
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.Lv_ListaCimentoGalpao = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -104,7 +104,7 @@ namespace SICP.SubForms
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.LightGray;
             this.bunifuGroupBox1.BorderRadius = 1;
             this.bunifuGroupBox1.BorderThickness = 1;
-            this.bunifuGroupBox1.Controls.Add(this.listView1);
+            this.bunifuGroupBox1.Controls.Add(this.Lv_ListaCimentoGalpao);
             this.bunifuGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -117,25 +117,25 @@ namespace SICP.SubForms
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "CIMENTO NO GALPÃO";
             // 
-            // listView1
+            // Lv_ListaCimentoGalpao
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Info;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Lv_ListaCimentoGalpao.BackColor = System.Drawing.SystemColors.Info;
+            this.Lv_ListaCimentoGalpao.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 19);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1062, 379);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.Lv_ListaCimentoGalpao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lv_ListaCimentoGalpao.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Lv_ListaCimentoGalpao.HideSelection = false;
+            this.Lv_ListaCimentoGalpao.Location = new System.Drawing.Point(3, 19);
+            this.Lv_ListaCimentoGalpao.Name = "Lv_ListaCimentoGalpao";
+            this.Lv_ListaCimentoGalpao.Size = new System.Drawing.Size(1062, 379);
+            this.Lv_ListaCimentoGalpao.TabIndex = 0;
+            this.Lv_ListaCimentoGalpao.UseCompatibleStateImageBehavior = false;
+            this.Lv_ListaCimentoGalpao.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -1013,7 +1013,6 @@ namespace SICP.SubForms
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -1040,5 +1039,6 @@ namespace SICP.SubForms
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton3;
+        public System.Windows.Forms.ListView Lv_ListaCimentoGalpao;
     }
 }
