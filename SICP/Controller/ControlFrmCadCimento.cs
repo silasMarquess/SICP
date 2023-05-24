@@ -33,7 +33,8 @@ namespace SICP.Controller
             mat.QtdeEstoque = int.Parse(_form.Cb_EstoqueInicial.SelectedItem.ToString());
 
             //INSERIR OBJETO NO BANCO DE DADOS:
-            bool teste = MaterialDAO.VerificaSeMatExist(mat);
+            bool teste = ConexaoDAO.ValidateOperation(MaterialDAO.VerificaSeMatExist, mat);
+
             if (teste) throw new DomainsException("Erro: Material ja está cadastrado");
             ConexaoDAO.ModifyOperation(MaterialDAO.InsertNewMaterial, mat);
             System.Windows.Forms.MessageBox.Show("Material Inserido com sucesso !");
@@ -57,6 +58,7 @@ namespace SICP.Controller
         public string GenerateCodigo()
         {
             Random rd = new Random();
+
             string codigo = "MC0000";
             bool teste = ConexaoDAO.ValidateOperation(MaterialDAO.VerificaSeCodeExist, codigo);
 

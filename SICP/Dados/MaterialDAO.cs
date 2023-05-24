@@ -82,14 +82,16 @@ namespace SICP.Dados
         {
             string query = "select * from tb_matConst where descricao = @descricao";
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            cmd.Parameters.AddWithValue("@descricao", mat.Descricao);
             MySqlDataReader r = cmd.ExecuteReader();
             return (r.Read()) ? true : false;
         }
 
         public static bool VerificaSeCodeExist(string codigo)
         {
-            string query = "select cod tb_MatConst where cod=@codigo";
+            string query = "select cod from tb_MatConst where cod=@codigo";
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            cmd.Parameters.AddWithValue("@codigo", codigo);
             MySqlDataReader rd = cmd.ExecuteReader();
             return (rd.Read()) ? true : false;
 

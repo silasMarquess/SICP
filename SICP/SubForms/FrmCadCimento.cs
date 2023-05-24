@@ -52,5 +52,18 @@ namespace SICP.SubForms
             decimal percLucro = (diferenca / valorCusto) * 100;
             NumUp_PerLucro.Value = percLucro;
         }
+
+        private void btn_CadastrarMarca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _control.ControlRegistraMarcasCimento();
+            }
+            catch(DomainsException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
     }
 }
