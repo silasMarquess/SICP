@@ -38,6 +38,17 @@ namespace SICP.Controller
             if (teste) throw new DomainsException("Erro: Material ja está cadastrado");
             ConexaoDAO.ModifyOperation(MaterialDAO.InsertNewMaterial, mat);
             System.Windows.Forms.MessageBox.Show("Material Inserido com sucesso !");
+            this.LimpaCampos();
+        }
+
+        public void LimpaCampos()
+        {
+            _form.txt_NomeMarcaCimento.Text = "";
+            _form.Cb_EstoqueInicial.SelectedIndex = 0;
+            _form.NumUp_ValorCusto.Value = 0;
+            _form.NumUp_PerLucro.Value = 0;
+            _form.Lb_ValLucro.Text = "";
+            _form.NumUp_ValorVenda.Value = 0;
         }
 
         public void ValidaCadastro()
@@ -52,6 +63,22 @@ namespace SICP.Controller
             {
                 _form.Cb_EstoqueInicial.Items.Add(i);
             }
+        }
+
+        public void ControlUpdateMarcaCimento()
+        {
+            this.ValidaCadastro();
+
+            MatConstrucao mat = new MatConstrucao();
+            mat.Cod = GenerateCodigo();
+            mat.Descricao = _form.txt_NomeMarcaCimento.Text;
+            mat.Custo = _form.NumUp_ValorCusto.Value;
+            mat.ValLucro = mat.CalculaValorLucro(_form.NumUp_PerLucro.Value);
+            mat.Tipo = TipoMaterial.CIMENTO;
+            mat.QtdeEstoque = int.Parse(_form.Cb_EstoqueInicial.SelectedItem.ToString());
+
+            ConexaoDAO.ModifyOperation(MaterialDAO.UpdateInfoMat, mat);
+            System.Windows.Forms.MessageBox.Show("Dados Atualizados com sucesso !");
         }
 
 

@@ -91,5 +91,25 @@ namespace SICP.SubForms
             }
             
         }
+
+        private void btn_EditarDados_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _control.ControlUpdateMarcaCimento();
+
+            }catch(DomainsException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void NumUp_ValorCusto_ValueChanged(object sender, EventArgs e)
+        {
+            decimal valorCusto = NumUp_ValorCusto.Value;
+            decimal ValorAcrescimo = (NumUp_PerLucro.Value / 100) * valorCusto;
+            NumUp_ValorVenda.Value = valorCusto + ValorAcrescimo;
+            Lb_ValLucro.Text = ValorAcrescimo.ToString("F2") + " R$";
+        }
     }
 }

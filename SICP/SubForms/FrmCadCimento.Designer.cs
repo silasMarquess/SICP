@@ -185,6 +185,7 @@ namespace SICP.SubForms
             this.btn_EditarDados.TextMarginLeft = 0;
             this.btn_EditarDados.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_EditarDados.UseDefaultRadiusAndThickness = true;
+            this.btn_EditarDados.Click += new System.EventHandler(this.btn_EditarDados_Click);
             // 
             // Lb_ValLucro
             // 
@@ -423,6 +424,7 @@ namespace SICP.SubForms
             this.NumUp_ValorCusto.Size = new System.Drawing.Size(202, 29);
             this.NumUp_ValorCusto.TabIndex = 16;
             this.NumUp_ValorCusto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumUp_ValorCusto.ValueChanged += new System.EventHandler(this.NumUp_ValorCusto_ValueChanged);
             // 
             // bunifuLabel4
             // 
@@ -667,8 +669,8 @@ namespace SICP.SubForms
         public System.Windows.Forms.Button btn_FecharJanela;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         public Bunifu.UI.WinForms.BunifuLabel lb_codigoMat;
-        private Bunifu.UI.WinForms.BunifuLabel Lb_ValLucro;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_EditarDados;
         public Bunifu.UI.WinForms.BunifuLabel LB_Operacao;
+        public Bunifu.UI.WinForms.BunifuLabel Lb_ValLucro;
     }
 }
