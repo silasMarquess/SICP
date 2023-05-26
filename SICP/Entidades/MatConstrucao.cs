@@ -7,7 +7,7 @@ using SICP.Entidades.enums;
 
 namespace SICP.Entidades
 {
-    class MatConstrucao
+   public class MatConstrucao
     {
         public string Cod { get; set; }
         public string Descricao { get; set; }

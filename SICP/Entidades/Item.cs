@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SICP.Entidades
 {
-    class Item
+   public class Item
     {
         public int Id { get; set; }
         public int Qtde { get; set; }

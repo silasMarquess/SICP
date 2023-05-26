@@ -15,13 +15,15 @@ namespace SICP.Dados
         //inserindo novas Vendas
         public static void InsertNewVenda(Venda v)
         {
-            string query = "insert into tb_venda(codVenda, TotalVenda,desconto,adicional,cliente) values(@codVenda, @TotalVenda,@desconto,@adicional,@cliente)";
+            string query = "insert into tb_venda(codVenda, TotalVenda,desconto,adicional,cliente,data)" +
+                " values(@codVenda, @TotalVenda,@desconto,@adicional,@cliente, @data)";
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
             cmd.Parameters.AddWithValue("@codVenda", v.Codigo);
-            cmd.Parameters.AddWithValue("@totalVenda", v.CalculaTotalLiquido());
+            cmd.Parameters.AddWithValue("@totalVenda", v.CalculaTotalBruto());
             cmd.Parameters.AddWithValue("@desconto", v.Desconto);
             cmd.Parameters.AddWithValue("@adicional", v.Adicional);
             cmd.Parameters.AddWithValue("@cliente", v.Cliente);
+            cmd.Parameters.AddWithValue("@data", v.Data);
             cmd.ExecuteNonQuery();
         }
 
@@ -77,7 +79,8 @@ namespace SICP.Dados
                 decimal desconto = r.GetDecimal("desconto");
                 decimal adicional = r.GetDecimal("adicional");
                 string cliente = r.GetString("cliente");
-                Venda v = new Venda(codVenda, totalVenda, desconto, adicional, cliente);
+                DateTime data = r.GetDateTime("data");
+                Venda v = new Venda(codVenda, totalVenda, desconto, adicional, cliente,data);
                 lista.Add(v);
             }
             return lista;
@@ -86,10 +89,10 @@ namespace SICP.Dados
         public static void getItensForVenda(Venda v)
         {
             string query = "select i.*, m.* " +
-                "from tb_item  as i " +
+                " from tb_item  as i " +
                 "INNER JOIN tb_matConst as m " +
-                "on i.codMat = m.cod" +
-                " where i.codVenda = @CodVenda";
+                " on i.codMat = m.cod " +
+                "where i.codVenda = @CodVenda";
 
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
             cmd.Parameters.AddWithValue("@CodVenda", v.Codigo);
@@ -110,6 +113,16 @@ namespace SICP.Dados
                 MatConstrucao mat = new MatConstrucao(codigoMat, descricao, valorCusto, valorlucro, tipoMat,Estoque);
                 v.AddNewItem(new Item(id, qtde, mat));
             }
+        }
+
+
+        public static bool VerificaSeCodVendaExist(string codigo)
+        {
+            string query = "select * from tb_venda where codVenda = @venda";
+            MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
+            cmd.Parameters.AddWithValue("@venda", codigo);
+            MySqlDataReader rd = cmd.ExecuteReader();
+            return (rd.Read()) ? true : false;
         }
     }
 }

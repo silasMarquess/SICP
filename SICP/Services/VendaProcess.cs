@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SICP.Entidades.enums
-{
-   public enum TipoMaterial:int
-    {
-        CIMENTO=0,
-        OUTRO=1
+using SICP.Entidades.enums;
+using SICP.Entidades;
 
+namespace SICP.Services
+{
+    class VendaProcess
+    {
+      
     }
 }

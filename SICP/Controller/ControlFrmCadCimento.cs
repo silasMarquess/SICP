@@ -30,7 +30,7 @@ namespace SICP.Controller
             mat.Custo = _form.NumUp_ValorCusto.Value;
             mat.ValLucro = mat.CalculaValorLucro(_form.NumUp_PerLucro.Value);
             mat.Tipo = TipoMaterial.CIMENTO;
-            mat.QtdeEstoque = int.Parse(_form.Cb_EstoqueInicial.SelectedItem.ToString());
+            mat.QtdeEstoque = int.Parse(_form.NumUp_EstoqueInicial.Value.ToString());
 
             //INSERIR OBJETO NO BANCO DE DADOS:
             bool teste = ConexaoDAO.ValidateOperation(MaterialDAO.VerificaSeMatExist, mat);
@@ -44,7 +44,7 @@ namespace SICP.Controller
         public void LimpaCampos()
         {
             _form.txt_NomeMarcaCimento.Text = "";
-            _form.Cb_EstoqueInicial.SelectedIndex = 0;
+            _form.NumUp_EstoqueInicial.Value = 0;
             _form.NumUp_ValorCusto.Value = 0;
             _form.NumUp_PerLucro.Value = 0;
             _form.Lb_ValLucro.Text = "";
@@ -61,22 +61,20 @@ namespace SICP.Controller
             //preenche combox Unidades
             for(int i = 0; i < 1000; i++)
             {
-                _form.Cb_EstoqueInicial.Items.Add(i);
+              //  _form.Cb_EstoqueInicial.Items.Add(i);
             }
         }
 
         public void ControlUpdateMarcaCimento()
         {
-            this.ValidaCadastro();
-
+            ValidaCadastro();
             MatConstrucao mat = new MatConstrucao();
-            mat.Cod = GenerateCodigo();
+            mat.Cod = _form.lb_codigoMat.Text;
             mat.Descricao = _form.txt_NomeMarcaCimento.Text;
             mat.Custo = _form.NumUp_ValorCusto.Value;
             mat.ValLucro = mat.CalculaValorLucro(_form.NumUp_PerLucro.Value);
             mat.Tipo = TipoMaterial.CIMENTO;
-            mat.QtdeEstoque = int.Parse(_form.Cb_EstoqueInicial.SelectedItem.ToString());
-
+            mat.QtdeEstoque = int.Parse(_form.NumUp_EstoqueInicial.Value.ToString());
             ConexaoDAO.ModifyOperation(MaterialDAO.UpdateInfoMat, mat);
             System.Windows.Forms.MessageBox.Show("Dados Atualizados com sucesso !");
         }

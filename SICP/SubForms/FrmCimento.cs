@@ -20,6 +20,19 @@ namespace SICP.SubForms
         {
             InitializeComponent();
             _control = new ControlRegCimentos(this);
+            PreparaControle();
+        }
+
+        public void PreparaControle()
+        {
+            Cb_AnoVenda.Items.Clear();
+            for(int i = DateTime.Now.Year; i >= (DateTime.Now.Year - 10); i--)
+            {
+                Cb_AnoVenda.Items.Add(i);
+            }
+            int ano = DateTime.Now.Year;
+            Cb_AnoVenda.SelectedItem = ano;
+            Cb_MesVenda.SelectedIndex = DateTime.Now.Month -1 ;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -29,8 +42,18 @@ namespace SICP.SubForms
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            FrmVendaCimento vendaForm = new FrmVendaCimento();
-            vendaForm.ShowDialog();
+            try
+            {
+                _control.ControlNewVenda();
+            }
+            catch (DomainsException ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }catch(ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show("Erro: Nemhuma Marca Selecionada no momento !");
+            }
         }
 
         private void bunifuButton3_Click(object sender, EventArgs e)
@@ -52,6 +75,8 @@ namespace SICP.SubForms
         private void FrmCimento_Load(object sender, EventArgs e)
         {
             _control.GetListaCimentoGalpao();
+            _control.ControlBuscaVendaMes();
+           // _control.MostraListaMarcasCimento();
         }
 
         private void Lv_ListaCimentoGalpao_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,6 +116,30 @@ namespace SICP.SubForms
             catch (ArgumentOutOfRangeException ex)
             {
                 MessageBox.Show("ERRO: Nada Selecionado !");
+            }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            _control.ControlBuscaVendaMes();
+
+            }catch(DomainsException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Cb_MarcaCimento_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                _control.FiltraListaCimento();
+
+            }catch(DomainsException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

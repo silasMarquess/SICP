@@ -49,17 +49,18 @@ namespace SICP.SubForms
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.NumUp_ValorCusto = new System.Windows.Forms.NumericUpDown();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.Cb_EstoqueInicial = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_NomeMarcaCimento = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.button3 = new System.Windows.Forms.Button();
             this.LB_Operacao = new Bunifu.UI.WinForms.BunifuLabel();
+            this.NumUp_EstoqueInicial = new System.Windows.Forms.NumericUpDown();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_ValorVenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_PerLucro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_ValorCusto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumUp_EstoqueInicial)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -68,6 +69,7 @@ namespace SICP.SubForms
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Turquoise;
+            this.bunifuCards1.Controls.Add(this.NumUp_EstoqueInicial);
             this.bunifuCards1.Controls.Add(this.btn_EditarDados);
             this.bunifuCards1.Controls.Add(this.Lb_ValLucro);
             this.bunifuCards1.Controls.Add(this.bunifuSeparator2);
@@ -80,7 +82,6 @@ namespace SICP.SubForms
             this.bunifuCards1.Controls.Add(this.bunifuLabel5);
             this.bunifuCards1.Controls.Add(this.NumUp_ValorCusto);
             this.bunifuCards1.Controls.Add(this.bunifuLabel4);
-            this.bunifuCards1.Controls.Add(this.Cb_EstoqueInicial);
             this.bunifuCards1.Controls.Add(this.bunifuLabel3);
             this.bunifuCards1.Controls.Add(this.txt_NomeMarcaCimento);
             this.bunifuCards1.Controls.Add(this.bunifuLabel2);
@@ -441,55 +442,13 @@ namespace SICP.SubForms
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // Cb_EstoqueInicial
-            // 
-            this.Cb_EstoqueInicial.BackColor = System.Drawing.Color.Transparent;
-            this.Cb_EstoqueInicial.BackgroundColor = System.Drawing.Color.White;
-            this.Cb_EstoqueInicial.BorderColor = System.Drawing.Color.Silver;
-            this.Cb_EstoqueInicial.BorderRadius = 5;
-            this.Cb_EstoqueInicial.Color = System.Drawing.Color.Silver;
-            this.Cb_EstoqueInicial.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.Cb_EstoqueInicial.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Cb_EstoqueInicial.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.Cb_EstoqueInicial.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Cb_EstoqueInicial.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Cb_EstoqueInicial.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.Cb_EstoqueInicial.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Cb_EstoqueInicial.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.Cb_EstoqueInicial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cb_EstoqueInicial.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.Cb_EstoqueInicial.FillDropDown = true;
-            this.Cb_EstoqueInicial.FillIndicator = false;
-            this.Cb_EstoqueInicial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb_EstoqueInicial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.Cb_EstoqueInicial.ForeColor = System.Drawing.Color.Black;
-            this.Cb_EstoqueInicial.FormattingEnabled = true;
-            this.Cb_EstoqueInicial.Icon = null;
-            this.Cb_EstoqueInicial.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.Cb_EstoqueInicial.IndicatorColor = System.Drawing.Color.Gray;
-            this.Cb_EstoqueInicial.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.Cb_EstoqueInicial.ItemBackColor = System.Drawing.Color.White;
-            this.Cb_EstoqueInicial.ItemBorderColor = System.Drawing.Color.White;
-            this.Cb_EstoqueInicial.ItemForeColor = System.Drawing.Color.Black;
-            this.Cb_EstoqueInicial.ItemHeight = 26;
-            this.Cb_EstoqueInicial.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.Cb_EstoqueInicial.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.Cb_EstoqueInicial.ItemTopMargin = 3;
-            this.Cb_EstoqueInicial.Location = new System.Drawing.Point(383, 106);
-            this.Cb_EstoqueInicial.Name = "Cb_EstoqueInicial";
-            this.Cb_EstoqueInicial.Size = new System.Drawing.Size(162, 32);
-            this.Cb_EstoqueInicial.TabIndex = 7;
-            this.Cb_EstoqueInicial.Text = null;
-            this.Cb_EstoqueInicial.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.Cb_EstoqueInicial.TextLeftMargin = 5;
-            // 
             // bunifuLabel3
             // 
             this.bunifuLabel3.AllowParentOverrides = false;
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(407, 71);
+            this.bunifuLabel3.Location = new System.Drawing.Point(400, 71);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(124, 21);
@@ -631,6 +590,24 @@ namespace SICP.SubForms
             this.LB_Operacao.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.LB_Operacao.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // NumUp_EstoqueInicial
+            // 
+            this.NumUp_EstoqueInicial.BackColor = System.Drawing.Color.FloralWhite;
+            this.NumUp_EstoqueInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumUp_EstoqueInicial.DecimalPlaces = 2;
+            this.NumUp_EstoqueInicial.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumUp_EstoqueInicial.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.NumUp_EstoqueInicial.Location = new System.Drawing.Point(383, 109);
+            this.NumUp_EstoqueInicial.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NumUp_EstoqueInicial.Name = "NumUp_EstoqueInicial";
+            this.NumUp_EstoqueInicial.Size = new System.Drawing.Size(163, 29);
+            this.NumUp_EstoqueInicial.TabIndex = 28;
+            this.NumUp_EstoqueInicial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmCadCimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -646,6 +623,7 @@ namespace SICP.SubForms
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_ValorVenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_PerLucro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUp_ValorCusto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumUp_EstoqueInicial)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,7 +639,6 @@ namespace SICP.SubForms
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         public Bunifu.UI.WinForms.BunifuTextBox txt_NomeMarcaCimento;
-        public Bunifu.UI.WinForms.BunifuDropdown Cb_EstoqueInicial;
         public System.Windows.Forms.NumericUpDown NumUp_ValorCusto;
         public System.Windows.Forms.NumericUpDown NumUp_PerLucro;
         public System.Windows.Forms.NumericUpDown NumUp_ValorVenda;
@@ -672,5 +649,6 @@ namespace SICP.SubForms
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_EditarDados;
         public Bunifu.UI.WinForms.BunifuLabel LB_Operacao;
         public Bunifu.UI.WinForms.BunifuLabel Lb_ValLucro;
+        public System.Windows.Forms.NumericUpDown NumUp_EstoqueInicial;
     }
 }

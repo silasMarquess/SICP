@@ -9,13 +9,19 @@ namespace SICP.Entidades
     class Venda
     {
         public string Codigo { get; set; }
-        public decimal Total { get; private set; }
+        public decimal Total { get; set; }
         public decimal Desconto { get; set; }
         public decimal Adicional { get; set; }
         public string Cliente { get; set; }
+
+        public DateTime Data { get; set; }
+
         public List<Item> ListaItens { get; private set; } = new List<Item>();
 
+        public Venda()
+        {
 
+        }
 
         public Venda(string codigo, decimal total, decimal desconto, decimal adicional, string cliente)
         {
@@ -26,9 +32,20 @@ namespace SICP.Entidades
             Cliente = cliente;
         }
 
+        public Venda(string codigo, decimal total, decimal desconto, decimal adicional, string cliente, DateTime data)
+            : this(codigo, total, desconto,  adicional, cliente)
+        {
+            Data = data;
+        }
+
         public void AddNewItem(Item i)
         {
             ListaItens.Add(i);
+        }
+
+        public Item GetItem(int index)
+        {
+            return ListaItens[index];
         }
 
         public decimal CalculaTotalBruto()
@@ -49,6 +66,7 @@ namespace SICP.Entidades
         public decimal CalculaTotalLucro()
         {
             decimal valor = 0;
+
             foreach(Item i in ListaItens)
             {
                 valor += i.CalculaLucro();

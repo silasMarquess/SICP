@@ -58,14 +58,14 @@ namespace SICP.Dados
 
         public static void UpdateInfoMat(MatConstrucao mat)
         {
-            string query = "update tb_matconst set descricao =@desc, valcusto =@custo, vallucro =@lucro," +
-                "tipomat=tipo,estoque = @estoque where cod =@cod";
+            string query = "update tb_matconst set descricao =  @desc, valcusto = @custo, vallucro =@lucro, " +
+                "tipomat=@tipo, estoque = @estoque where cod =@cod";
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
             cmd.Parameters.AddWithValue("@cod", mat.Cod);
-            cmd.Parameters.AddWithValue("@descricao", mat.Descricao);
-            cmd.Parameters.AddWithValue("@valcusto", mat.Custo);
-            cmd.Parameters.AddWithValue("@vallucro", mat.ValLucro);
-            cmd.Parameters.AddWithValue("@tipomat", (int)mat.Tipo);
+            cmd.Parameters.AddWithValue("@desc", mat.Descricao);
+            cmd.Parameters.AddWithValue("@custo", mat.Custo);
+            cmd.Parameters.AddWithValue("@lucro", mat.ValLucro);
+            cmd.Parameters.AddWithValue("@tipo", (int)mat.Tipo);
             cmd.Parameters.AddWithValue("@estoque", mat.QtdeEstoque);
             cmd.ExecuteNonQuery();
         }
@@ -97,7 +97,7 @@ namespace SICP.Dados
 
         }
 
-        public static void InsertMarcaCimento(MarcaCimento m)
+       /* public static void InsertMarcaCimento(MarcaCimento m)
         {
             string query = "insert into tb_marcaCimento(nome) values(@nomd)";
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
@@ -149,6 +149,6 @@ namespace SICP.Dados
             MySqlCommand cmd = new MySqlCommand(query, ConexaoDAO._conexao);
             MySqlDataReader rd = cmd.ExecuteReader();
             return (rd.Read()) ? true : false;
-        }
+        }*/
     }
 }
